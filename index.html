@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DXP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="site-title-container" class="centered">
+    <p id="site-title"></p>
+  </div>
+  <div id="progress-tracking"></div>
+    <!-- Progress tracking -->
+    <div id="progress-tracker"></div>
+    <div id="progress-bar-container">
+      <div id="progress-bar-background"></div>
+      <div id="progress-bar-foreground"></div>
+    </div>
+  </div>
+  <div id="navigation">
+    <!-- Previous button with glowing effect -->
+    <div id="previous" class="nav-button glow-on-hover"><p>Previous</p></div>
+    <!-- Next button with glowing effect -->
+    <div id="next" class="nav-button glow-on-hover"><p>Next</p></div>
+  </div>
+  <div id="site-container">
+    <div id="site-frame">
+      <!-- The site will be dynamically updated based on the siteLinks array -->
+      <iframe id="site-player" src="" title="site Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+</body>
+<script src="main.js"></script>
+</html>
