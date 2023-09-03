@@ -19,15 +19,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 20px;
     width: 100%; /* Set width to 100% to take up the full width of the page */
-    height: 80vh;
+    height: 100%;
 }
 
 #site-frame {
     width: 100%; /* Set width to 100% to take up the full width of the container */
-    max-height: 100%;
-    border: 8px solid black;
+    height: 74vh;
+    border: 8px solid white;
+    background: white;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -121,43 +122,4 @@ body {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
-}
-
-#progress-tracker {
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-#progress-bar-container {
-    position: relative;
-    width: 80%;
-    height: 20px;
-    background-color: gray; /* Background color of the progress bar */
-    border-radius: 5px;
-    margin-top: 5px;
-    left: 50%; /* Center the progress bar horizontally */
-    transform: translateX(-50%); /* Move the progress bar to center */
-}
-
-#progress-bar-background,
-#progress-bar-foreground {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    border-radius: 5px;
-}
-
-#progress-bar-background {
-    width: 100%;
-    background-color: gray; /* Background color of the progress bar */
-}
-
-#progress-bar-foreground {
-    width: 0;
-    background-color: green; /* Foreground color of the progress bar */
 }
