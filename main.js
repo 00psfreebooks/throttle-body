@@ -5,13 +5,14 @@ const rssSites = {
   "WSJ World": "https://feeds.a.dj.com/rss/RSSWorldNews.xml",
   "WSJ Market": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml",
   "WSJ Tech": "https://feeds.a.dj.com/rss/RSSWSJD.xml",
-  "CNN Latest": "http://rss.cnn.com/rss/cnn_latest.rss",
-  "CNN Top": "http://rss.cnn.com/rss/cnn_topstories.rss",
-  "CNN Politics": "http://rss.cnn.com/rss/cnn_allpolitics.rss",
+  "NY Times US": "https://rss.nytimes.com/services/xml/rss/nyt/US.xml",
+  "NY Times Politics": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+  "NY Times Tech": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
   "EPOCH US Politics": "https://feed.theepochtimes.com/us/us-politics/feed",
   "EPOCH Companies": "https://feed.theepochtimes.com/business/companies/feed",
   "EPOCH Economy": "https://feed.theepochtimes.com/business/economies/feed",
-  "Yahoo News": "https://news.yahoo.com/rss/",
+  //"Yahoo News": "https://news.yahoo.com/rss/",
+  //"Google News": "https://news.google.com/news/rss",
 };
 
 const proxyURL = 'https://thingproxy.freeboard.io/fetch/';
