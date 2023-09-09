@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DXP</title>
+  <script src="https://cdn.jsdelivr.net/npm/rss-parser@3.13.0/dist/rss-parser.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,11 +17,14 @@
     <!-- Next button with glowing effect -->
     <div id="next" class="nav-button glow-on-hover"><p>Next</p></div>
   </div>
-  <div id="site-container">
-    <div id="site-frame">
-      <!-- The site will be dynamically updated based on the siteLinks array -->
-      <iframe id="site-player" src="" title="site Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <div id="scrollable-container">
+    <div id="article-container">
+      <h3><a id="article-title-link" href="" target="_blank"></a></h3>
+      <p id="article-content"></p>
     </div>
+  </div>
+  <div id="nav-bar">
+    <p><span id="current-article-number"></span> / <span id="total-articles"></span></p>
   </div>
 </body>
 <script src="main.js"></script>

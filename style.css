@@ -3,11 +3,14 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: black;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-#site-title {
+#site-title-container {
     color: white;
     font-size: 2em;
     font-weight: bold;
@@ -15,28 +18,40 @@ body {
     margin-top: 30px;
 }
 
-#site-container {
+#scrollable-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-    width: 100%; /* Set width to 100% to take up the full width of the page */
-    height: 100%;
-}
-
-#site-frame {
-    width: 100%; /* Set width to 100% to take up the full width of the container */
-    height: 74vh;
-    border: 8px solid white;
+    width: 95%;
+    max-height: 74vh;
+    overflow-y: auto;
     background: white;
     border-radius: 20px;
-    overflow: hidden;
+    margin-top: 5vh;
 }
 
-#site-player {
-    width: 100%; /* Set width to 100% to take up the full width of the iframe */
-    height: 100%;
-    border: none;
+#article-container {
+    width: 95%;
+}
+
+#article-container h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333; /* Change text color to a readable color */
+}
+
+#article-container p {
+    margin: 0;
+    font-size: 1em;
+    color: #555; /* Change text color to a readable color */
+}
+
+#nav-bar {
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 20px;
 }
 
 #navigation {
@@ -44,10 +59,10 @@ body {
     justify-content: center;
     margin-top: 20px;
 }
+
 /* Gap between buttons */
 .nav-button {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0 20px;
     font-size: 1.5em;
     font-weight: bold;
     text-align: center;
@@ -64,7 +79,6 @@ body {
 
 /* Glowing effect styles */
 .glow-on-hover {
-    /* Add the styles for the glowing button */
     width: 150px;
     height: 50px;
     border: none;
