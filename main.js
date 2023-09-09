@@ -1,7 +1,7 @@
 const rssSites = {
   "FOX Latest": "https://moxie.foxnews.com/google-publisher/latest.xml",
-  "FOX World" : "https://moxie.foxnews.com/google-publisher/world.xml",
-  "FOX Politics" : "https://moxie.foxnews.com/google-publisher/politics.xml",
+  "FOX World": "https://moxie.foxnews.com/google-publisher/world.xml",
+  "FOX Politics": "https://moxie.foxnews.com/google-publisher/politics.xml",
   "WSJ World": "https://feeds.a.dj.com/rss/RSSWorldNews.xml",
   "WSJ Market": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml",
   "WSJ Tech": "https://feeds.a.dj.com/rss/RSSWSJD.xml",
@@ -13,6 +13,8 @@ const rssSites = {
   "EPOCH Economy": "https://feed.theepochtimes.com/business/economies/feed",
   "Yahoo News": "https://news.yahoo.com/rss/",
 };
+
+const proxyURL = 'https://thingproxy.freeboard.io/fetch/';
 
 let currentSiteIndex = 0;
 let currentFeedIndex = 0;
@@ -29,7 +31,11 @@ function displayCurrentSite() {
 
     // Fetch and parse the RSS feed based on the current site name
     let siteURL = rssSites[siteName];
-    parser.parseURL(siteURL, function (err, feed) {
+
+    // Use the ThingProxy service to bypass CORS restrictions
+    let proxySiteURL = proxyURL + encodeURIComponent(siteURL);
+
+    parser.parseURL(proxySiteURL, function (err, feed) {
       if (err) {
         console.error(`Error fetching RSS feed for '${siteName}':`, err);
         return;
@@ -46,8 +52,6 @@ function displayCurrentSite() {
     console.error(`Site not found at index '${currentSiteIndex}'.`);
   }
 }
-
-
 
 function formatContent(content) {
   // Use a regular expression to remove HTML tags and replace certain entities
